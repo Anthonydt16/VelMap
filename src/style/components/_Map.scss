@@ -1,3 +1,25 @@
-.map{
-  height: 400px;
+map{
+  >div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    >span {
+      display: inline-block;
+      padding: 10px 20px;
+
+      &:hover {
+        text-decoration: underline;
+        background-color: $color-secondary;
+        color: $color-primary;
+      }
+      &.active {
+        background-color: $color-secondary;
+        color: $color-primary;
+        text-underline: #D9D9D9;
+      }
+    }
+  }
+  .map{
+    height: 400px;
+  }
 }
