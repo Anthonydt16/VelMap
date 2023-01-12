@@ -1,9 +1,22 @@
 .container-search {
-
+  #search-input{
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    background-color: $color-quaternary;
+    color: $color-secondary;
+    &::placeholder {
+      color: $color-secondary;
+    }
+  }
   .container-search-result {
     overflow-x: hidden;
     overflow-y: scroll;
     height: 40vh;
+
     .searchResult {
       display: flex;
       flex-direction: row;
@@ -16,6 +29,7 @@
         padding: 20px;
         background-color: $color-quaternary;
         margin: 10px;
+        border-radius: 10px;
 
         h2 {
           span.flag {
@@ -44,7 +58,7 @@
     }
   }
   map{
-    width: 100%;
+    width: 200px;
     height: 100%;
   }
 

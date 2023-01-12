@@ -1,14 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import NavBar from "../components/NavBar";
 import Map from "../components/Map";
-
 const Recherche = () => {
     const [search, setSearch] = useState([]);
     const [searchResult, setSearchResult] = useState([]);
-    /**
-     * retourne le svg flag fr
-     * @return html
-     * */
     const getFlag = () => {
         return (
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-10 -10 3020 2020">
@@ -40,8 +35,9 @@ const Recherche = () => {
         <div>
             <NavBar/>
             <div className={"container-search"}>
-                <h2>Recherche</h2>
+                <h2>Rechercher un contrat</h2>
                 <input type="text" id="search-input" placeholder="Recherche" onChange={(e) => setSearch(e.target.value)}/>
+
                 <div className={"container-search-result"}>
                     <div className={"searchResult"}>
                         {searchResult.map((searchR, key) => {return (
