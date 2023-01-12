@@ -1,27 +1,51 @@
-.searchResult{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  div.card{
-    font-family: BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', serif;
-    padding: 20px;
-    background-color: $color-quaternary;
+.container-search {
 
-    .button{
-      background-color: $color-quinary;
-      color: $color-primary;
-      border: none;
-      border-radius: 5px;
-      padding: 10px;
-      font-size: 20px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: 0.3s;
-      &:hover{
-        background-color: $color-secondary;
+  .container-search-result {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 40vh;
+    .searchResult {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+
+      > div.card {
+        font-family: BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', serif;
+        padding: 20px;
+        background-color: $color-quaternary;
+        margin: 10px;
+
+        h2 {
+          span.flag {
+            svg {
+              width: 20px;
+            }
+          }
+        }
+
+        .button {
+          background-color: $color-quinary;
+          color: $color-primary;
+          border: none;
+          border-radius: 5px;
+          padding: 10px;
+          font-size: 20px;
+          font-weight: 700;
+          cursor: pointer;
+          transition: 0.3s;
+
+          &:hover {
+            background-color: $color-secondary;
+          }
+        }
       }
     }
   }
+  map{
+    width: 100%;
+    height: 100%;
+  }
+
 }
