@@ -26,7 +26,6 @@ const Home = () => {
             let stationsJson = await stations.json();
             //garder les stations qui on a contratname dans dataJson
             stationsJson = stationsJson.filter((station) => dataJson.some((contrat) => contrat.name === station.contractName));
-            console.log(stationsJson);
             setDataContrats(dataJson);
             setDataStations(stationsJson);
         }

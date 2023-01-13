@@ -1,5 +1,9 @@
 .container-search {
-  #search-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  #search-input {
     height: 100%;
     border: none;
     border-radius: 10px;
@@ -8,58 +12,67 @@
     font-size: 1.2rem;
     background-color: $color-quaternary;
     color: $color-secondary;
+
     &::placeholder {
       color: $color-secondary;
     }
   }
-  .container-search-result {
-    overflow-x: hidden;
-    overflow-y: scroll;
-    height: 40vh;
 
-    .searchResult {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-items: center;
+  .container-map-search-result {
+    display: flex;
 
-      > div.card {
-        font-family: BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', serif;
-        padding: 20px;
-        background-color: $color-quaternary;
-        margin: 10px;
-        border-radius: 10px;
+    .container-search-result {
+      overflow-x: hidden;
+      overflow-y: scroll;
+      height: 73vh;
+      margin-top: 20px;
 
-        h2 {
-          span.flag {
-            svg {
-              width: 20px;
+      .searchResult {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        flex-wrap: wrap;
+
+        > div.card {
+          font-family: BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', serif;
+          padding: 20px;
+          background-color: $color-quaternary;
+          margin: 10px;
+          border-radius: 10px;
+
+          h2 {
+            span.flag {
+              svg {
+                width: 20px;
+              }
             }
           }
-        }
 
-        .button {
-          background-color: $color-quinary;
-          color: $color-primary;
-          border: none;
-          border-radius: 5px;
-          padding: 10px;
-          font-size: 20px;
-          font-weight: 700;
-          cursor: pointer;
-          transition: 0.3s;
+          .button {
+            background-color: $color-quinary;
+            color: $color-primary;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
 
-          &:hover {
-            background-color: $color-secondary;
+            &:hover {
+              background-color: $color-secondary;
+            }
           }
         }
       }
     }
   }
-  map{
-    width: 200px;
-    height: 100%;
+  map {
+    height: 67vh;
+    width: 50vw;
+    padding: 20px;
+    display: block;
   }
 
 }

@@ -37,19 +37,21 @@ const Recherche = () => {
             <div className={"container-search"}>
                 <h2>Rechercher un contrat</h2>
                 <input type="text" id="search-input" placeholder="Recherche" onChange={(e) => setSearch(e.target.value)}/>
-
-                <div className={"container-search-result"}>
-                    <div className={"searchResult"}>
-                        {searchResult.map((searchR, key) => {return (
-                            <div className={"card"} key={key}>
-                                <h2><span className={"flag"}>{getFlag()}</span>{searchR.name}</h2>
-                                <p>{searchR.commercial_name}</p>
-                                <a className={"button"} href={"/carte/" + searchR.name}>Voir les stations sur carte</a>
-                            </div>
-                        )})}
+                <div className={"container-map-search-result"}>
+                    <div className={"container-search-result"}>
+                        <div className={"searchResult"}>
+                            {searchResult.map((searchR, key) => {return (
+                                <div className={"card"} key={key}>
+                                    <h2><span className={"flag"}>{getFlag()}</span>{searchR.name}</h2>
+                                    <p>{searchR.commercial_name}</p>
+                                    <a className={"button"} href={"/carte/" + searchR.name}>Voir les stations sur carte</a>
+                                </div>
+                            )})}
+                        </div>
                     </div>
+                    <Map name={search} type={"contrat"}/>
                 </div>
-                <Map name={search} type={"contrat"}/>
+
 
             </div>
             </div>
