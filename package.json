@@ -2,6 +2,7 @@
   "name": "td_react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://Anthonydt16github.io/VelMap/",
   "dependencies": {
     "@changey/react-leaflet-markercluster": "^4.0.0-rc1",
     "@testing-library/jest-dom": "^5.16.5",
